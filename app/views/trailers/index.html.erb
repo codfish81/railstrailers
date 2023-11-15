@@ -1,0 +1,15 @@
+<h1>Trailers</h1>
+<br>
+<div id="trailers">
+  <% @trailers.each do |trailer| %>
+  <!-- < if trailer.user == current_user %> -->
+    <%= render trailer %>
+    <br>
+    <p>
+      <% link_to "Show this trailer", trailer, class:"btn btn-dark" %>
+    </p>
+  <% end %>
+  <!-- < end %> -->
+</div>
+
+<%= link_to "Add New Trailer", new_trailer_path, class:"btn btn-outline-dark btn-lg" %>

@@ -1,0 +1,23 @@
+<div class="jumbotron">
+  <h1 class="display-4"><%= @trailer.trailer_number %></h1>
+  <p class="lead">
+      Order Number:
+      <%= @trailer.order_number %><br>
+      Trucking Company: 
+      <%= @trailer.trucking_company %><br>
+      Truck Number: 
+      <%= @trailer.truck_number %><br>
+      Trailer Location: 
+      <%= @trailer.trailer_location %><br>
+      Dock Number: 
+      <%= @trailer.dock_number %><br>
+      Live Load: 
+      <%= @trailer.live_load %><br>
+      Start time in Dock: 
+      <%= @trailer.timer %>
+      <% render @trailer %>
+  </p>
+  <%= link_to "Edit this trailer", edit_trailer_path(@trailer), class: "btn btn-warning" %> |
+  <%= link_to "Back to trailers", trailers_path, class: "btn btn-dark" %> |
+  <%= link_to "Delete this trailer", @trailer,  data: { "turbo-method": :delete, turbo_confirm: 'Are you sure you want to delete trailer?' }, class: "btn btn-danger" %>
+</div>
