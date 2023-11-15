@@ -65,7 +65,7 @@ group :development do
   gem "web-console"
 
   # Use sqlite3 as the database for Active Record
-  gem "sqlite3", "~> 1.3.6"
+  gem 'sqlite3', '~> 1.6', '>= 1.6.8'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
